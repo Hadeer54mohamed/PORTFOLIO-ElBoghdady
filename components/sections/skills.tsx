@@ -4,12 +4,12 @@ import { useEffect, useState, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 const skills = [
-  { name: "Tailwind CSS", level: 95, color: "from-cyan-500 to-blue-500" },
-  { name: "React", level: 90, color: "from-primary to-accent" },
-  { name: "Next.js", level: 85, color: "from-accent to-primary" },
-  { name: "UI/UX Design", level: 80, color: "from-pink-500 to-primary" },
-  { name: "TypeScript", level: 75, color: "from-blue-500 to-indigo-500" },
-  { name: "Responsive Design", level: 95, color: "from-primary to-pink-500" },
+  { name: "Tailwind CSS", level: 95, color: "from-cyan-400 to-teal-500" },
+  { name: "React", level: 90, color: "from-fuchsia-500 to-purple-600" },
+  { name: "Next.js", level: 85, color: "from-purple-500 to-fuchsia-500" },
+  { name: "UI/UX Design", level: 80, color: "from-pink-500 to-fuchsia-600" },
+  { name: "TypeScript", level: 75, color: "from-blue-500 to-cyan-400" },
+  { name: "Responsive Design", level: 95, color: "from-fuchsia-500 to-cyan-400" },
 ]
 
 function SkillBar({ name, level, color, isVisible }: { name: string; level: number; color: string; isVisible: boolean }) {

@@ -12,25 +12,27 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
       
-      {/* Floating shapes */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-3xl" />
+      {/* Cyberpunk floating shapes */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-primary/15 via-accent/10 to-primary/15 rounded-full blur-3xl" />
+      <div className="absolute top-40 right-1/4 w-48 h-48 bg-accent/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }} />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center gap-8">
           {/* Profile Image */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent via-primary to-accent rounded-2xl opacity-50" />
             <div className="relative">
               <Image
-                src="/images/profile.jpg"
+                src="/images/profile.png"
                 alt="Hadeer Mohamed"
-                width={180}
-                height={180}
-                className="rounded-full border-4 border-background object-cover w-40 h-40 lg:w-44 lg:h-44"
+                width={320}
+                height={320}
+                className="rounded-2xl border-2 border-primary/30 object-cover w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 shadow-2xl shadow-primary/20"
                 priority
               />
             </div>
