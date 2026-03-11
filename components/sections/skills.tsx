@@ -17,9 +17,11 @@ const technicalSkills = [
 // Tool cards
 const tools = [
   { name: "React", icon: Code2, color: "from-cyan-500 to-blue-500" },
+  { name: "Next.js", icon: Layers, color: "from-gray-600 to-gray-800" },
   { name: "Figma", icon: Figma, color: "from-fuchsia-500 to-purple-500" },
   { name: "Git", icon: GitBranch, color: "from-orange-500 to-red-500" },
-  { name: "VS Code", icon: Layers, color: "from-blue-500 to-indigo-500" },
+  { name: "TypeScript", icon: Code2, color: "from-blue-500 to-blue-700" },
+  { name: "Framer Motion", icon: Zap, color: "from-pink-500 to-purple-500" },
 ]
 
 // Expertise areas
