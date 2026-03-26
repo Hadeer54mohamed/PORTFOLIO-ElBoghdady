@@ -43,7 +43,7 @@ export function Navbar() {
             href="/"
             className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
-            Dede
+            Hadeer ElBoghdady
           </Link>
 
           {/* Desktop Navigation */}
