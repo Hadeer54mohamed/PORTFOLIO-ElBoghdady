@@ -15,27 +15,18 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Hadeer Mohamed | Frontend Developer Portfolio',
+  title: 'Hadeer ElBoghdady | Frontend Developer Portfolio',
   description: 'Creative Frontend Developer turning ideas into interactive experiences. Specializing in React, Next.js, and modern web development.',
-  generator: 'v0.app',
+  generator: 'Hadeer ElBoghdady',
   keywords: ['frontend developer', 'react', 'next.js', 'web development', 'portfolio'],
-  authors: [{ name: 'Hadeer Mohamed' }],
+  authors: [{ name: 'Hadeer ElBoghdady' }],
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/images/dede-logo.png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/images/dede-logo.png',
   },
 }
 

@@ -186,7 +186,7 @@ export function HeroSection() {
               <div className="relative animate-float will-change-transform">
                 <Image
                   src="/images/hero.png"
-                  alt="Hadeer Mohamed ElBoghdady"
+                  alt="Hadeer ElBoghdady"
                   width={450} 
                   height={450}
                   className="relative rounded-2xl border-2 border-primary/20 object-cover w-85 h-70 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] xl:w-[600px] xl:h-[480px] shadow-[0_0_50px_rgba(217,70,239,0.15)] transition-all duration-500 group-hover:scale-[1.03] group-hover:border-primary/40"

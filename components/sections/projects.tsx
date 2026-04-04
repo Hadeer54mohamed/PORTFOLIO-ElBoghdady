@@ -6,8 +6,27 @@ import { ExternalLink, Github } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 const projects = [
+  {
+    title: "Basmat Alidrak",
+    description:
+      "Modern Arabic corporate tech platform with a cinematic UI experience. Built with advanced animations, interactive hero, and high-end UX using Next.js and Framer Motion.",
+    image: "/images/project-basmat.jpg",
+    technologies: ["Next.js", "Tailwind", "Framer Motion", "RTL"],
+    github: "#", // حطيه لو موجود
+    demo: "#",   // حطيه لو موجود
+  },
+  {
+    title: "Feminista Accessories",
+    description:
+      "Luxury e-commerce UI focused on branding and user experience. Includes advanced navbar interactions, hero animations, and premium visual design.",
+    image: "/images/project-feminista.jpg",
+    technologies: ["Next.js", "UI/UX", "Animations", "Responsive"],
+    github: "#",
+    demo: "#",
+  },
   {
     title: "Uzersaif Portfolio",
     description: "Personal portfolio built with Next.js, Tailwind CSS, React components architecture. Features modern design with smooth animations.",
@@ -47,72 +66,81 @@ export function ProjectsSection() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
-            <Card
-              key={project.title}
-              className="group relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Gradient border effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={340}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+          <motion.div
+          key={project.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          <Card className="group relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10">
+        
+            {/* 🔥 IMAGE + OVERLAY */}
+            <div className="relative overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={340}
+                className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+        
+              {/* overlay */}
+              <div className="flex gap-3 pt-2">
+  <Button
+    asChild
+    variant="outline"
+    size="sm"
+    className="flex-1 border-primary/30 hover:bg-primary/10 hover:border-primary"
+  >
+    <Link href={project.github} target="_blank">
+      <Github className="w-4 h-4 mr-2" />
+      Code
+    </Link>
+  </Button>
+
+  <Button
+    asChild
+    size="sm"
+    className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
+  >
+    <Link href={project.demo} target="_blank">
+      <ExternalLink className="w-4 h-4 mr-2" />
+      Live
+    </Link>
+  </Button>
+</div>
+        
+              {/* gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+            </div>
+        
+            {/* 🔥 CONTENT */}
+            <CardHeader>
+              <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                {project.title}
+              </CardTitle>
+        
+              <CardDescription>
+                {project.description}
+              </CardDescription>
+            </CardHeader>
+        
+            <CardContent className="space-y-4">
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech) => (
+                  <Badge
+                    key={tech}
+                    variant="secondary"
+                    className="bg-primary/10 text-primary hover:bg-primary/20 border-none"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
               </div>
-
-              <CardHeader className="relative">
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {project.description}
-                </CardDescription>
-              </CardHeader>
-
-              <CardContent className="relative space-y-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className="bg-primary/10 text-primary hover:bg-primary/20 border-none"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="flex gap-3 pt-2">
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-primary/30 hover:bg-primary/10 hover:border-primary"
-                  >
-                    <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="sm"
-                    className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-                  >
-                    <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            </CardContent>
+          </Card>
+        </motion.div>
           ))}
         </div>
       </div>

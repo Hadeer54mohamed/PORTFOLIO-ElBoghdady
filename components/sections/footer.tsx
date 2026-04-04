@@ -78,7 +78,7 @@ export function Footer() {
             {/* Copyright */}
             <div className="text-center">
               <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-                &copy; {currentYear} Hadeer Mohamed. Made with
+                &copy; {currentYear} Hadeer ElBoghdady. Made with
                 <Heart className="w-4 h-4 text-primary fill-primary" />
               </p>
             </div>
