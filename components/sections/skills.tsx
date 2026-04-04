@@ -8,20 +8,25 @@ import { Code2, Palette, Layers, Globe, Zap, Database, Figma, GitBranch } from "
 const technicalSkills = [
   { name: "React / Next.js", level: 92, color: "from-fuchsia-500 to-purple-600" },
   { name: "JavaScript (ES6+)", level: 90, color: "from-yellow-400 to-orange-500" },
-  { name: "TypeScript", level: 85, color: "from-blue-500 to-cyan-400" },
   { name: "HTML5 / CSS3", level: 98, color: "from-pink-500 to-fuchsia-600" },
   { name: "Tailwind CSS / SCSS", level: 95, color: "from-cyan-400 to-teal-500" },
-  { name: "Responsive Design", level: 95, color: "from-fuchsia-500 to-cyan-400" },
-  { name: "REST API Integration", level: 88, color: "from-indigo-500 to-purple-500" },
+  { name: "Responsive / Mobile-First Design", level: 95, color: "from-fuchsia-500 to-cyan-400" },
+  { name: "Framer Motion", level: 90, color: "from-indigo-500 to-purple-500" },
+  { name: "TypeScript (Assisted)", level: 70, color: "from-blue-400 to-cyan-400" },
+  { name: "REST API Integration (Assisted)", level: 75, color: "from-indigo-400 to-purple-400" },
+  { name: "Sanity CMS (Assisted)", level: 70, color: "from-green-400 to-teal-500" },
+  { name: "RTL / Arabic Layouts", level: 80, color: "from-red-400 to-pink-500" },
+  { name: "Figma (Assisted)", level: 65, color: "from-fuchsia-400 to-purple-400" },
 ]
 
 // Tool cards
 const tools = [
   { name: "React", icon: Code2, color: "from-cyan-500 to-blue-500" },
   { name: "Next.js", icon: Layers, color: "from-gray-500 to-gray-700" },
-  { name: "Figma", icon: Figma, color: "from-fuchsia-500 to-purple-500" },
-  { name: "Git & GitHub", icon: GitBranch, color: "from-orange-500 to-red-500" },
   { name: "VS Code", icon: Code2, color: "from-blue-500 to-indigo-500" },
+  { name: "cursor", icon: Code2, color: "from-blue-500 to-indigo-500" },
+  { name: "Git & GitHub", icon: GitBranch, color: "from-orange-500 to-red-500" },
+  { name: "AI & Interactive Design", icon: Zap, color: "from-fuchsia-500 to-purple-500" },
 ]
 
 // Expertise areas
@@ -45,11 +50,23 @@ const expertise = [
     color: "from-yellow-500 to-orange-500"
   },
   {
-    title: "API Integration",
-    description: "Connecting frontend applications with REST APIs and handling dynamic data efficiently.",
+    title: "API Integration (Assisted)",
+    description: "Connecting frontend applications with REST APIs, handling dynamic data with guidance.",
     icon: Database,
     color: "from-cyan-500 to-teal-500"
   },
+  {
+    title: "Dynamic CMS Integration (Assisted)",
+    description: "Connecting content from Sanity CMS into frontend applications with support.",
+    icon: Database,
+    color: "from-cyan-500 to-teal-500"
+  },
+  {
+    title: "Interactive UI & Micro-interactions",
+    description: "Implementing engaging, smooth animations and responsive UI patterns using Framer Motion and Tailwind CSS.",
+    icon: Zap,
+    color: "from-yellow-500 to-orange-500"
+  }
 ]
 
 function SkillBar({ name, level, color, isVisible, index }: { name: string; level: number; color: string; isVisible: boolean; index: number }) {

@@ -153,8 +153,13 @@ export function HeroSection() {
             </div>
             <div className="w-full space-y-8 pt-4">
               <div className="flex items-center justify-center lg:justify-start gap-4">
-                {[Github, Linkedin, Mail].map((Icon, i) => (
-                  <a key={i} href="#" className="p-3 rounded-xl bg-secondary/30 hover:bg-primary/20 hover:text-primary transition-all hover:-translate-y-1 border border-white/5 shadow-sm">
+                {[
+                  { Icon: Github, href: "https://github.com/Hadeer54mohamed", label: "GitHub" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/in/hadeer-elboghdady-2106a1252", label: "LinkedIn" },
+                  { Icon: Mail, href: "mailto:hadeerelboghdady54@gmail.com", label: "Email" },
+
+                ].map(({ Icon, href, label }) => (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="p-3 rounded-xl bg-secondary/30 hover:bg-primary/20 hover:text-primary transition-all hover:-translate-y-1 border border-white/5 shadow-sm">
                     <Icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -187,7 +192,7 @@ export function HeroSection() {
                 <Image
                   src="/images/hero.png"
                   alt="Hadeer ElBoghdady"
-                  width={450} 
+                  width={450}
                   height={450}
                   className="relative rounded-2xl border-2 border-primary/20 object-cover w-85 h-70 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] xl:w-[600px] xl:h-[480px] shadow-[0_0_50px_rgba(217,70,239,0.15)] transition-all duration-500 group-hover:scale-[1.03] group-hover:border-primary/40"
                   priority
@@ -212,7 +217,9 @@ export function HeroSection() {
 
             {/* Tech Tags */}
             <div className="flex flex-wrap justify-center gap-2.5 max-w-[320px] sm:max-w-none">
-              {["React", "Next.js", "JavaScript", "Tailwind", "CSS"].map((tech) => (
+              {[
+                "React","Next.js","JavaScript","TypeScript","Tailwind CSS","CSS","Framer Motion","RTL / Arabic","UI/UX","Sanity CMS"
+              ].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-1.5 text-[10px] sm:text-xs font-semibold rounded-full 
