@@ -39,7 +39,7 @@ export default function Home() {
         <ProjectsSection />
         <SkillsSection />
         <ServicesSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <ContactSection />
         <Footer />
       </div>

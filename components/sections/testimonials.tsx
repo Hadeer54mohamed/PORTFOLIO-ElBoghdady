@@ -54,7 +54,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background"
+      className="py-8 lg:py-12 relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background"
     >
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-y-1/2" />

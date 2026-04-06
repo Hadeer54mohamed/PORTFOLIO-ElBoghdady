@@ -57,7 +57,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="services" className="py-8 lg:py-12 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-blob" />
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-blob delay-2000" />
