@@ -127,7 +127,7 @@ export const menuExplorations = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-10 lg:py-20 relative overflow-hidden">
+    <section id="projects" className="pt-8 lg:pt-12 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -200,7 +200,7 @@ export function ProjectsSection() {
         </div>
 
         {/* ===== Section: Featured Projects ===== */}
-        <div className="text-center mb-16">
+       {/*  <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Featured Menu Projects
@@ -263,10 +263,10 @@ export function ProjectsSection() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* ===== Section: Menu UI Explorations ===== */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Interactive Menu UI Explorations
@@ -330,7 +330,7 @@ export function ProjectsSection() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

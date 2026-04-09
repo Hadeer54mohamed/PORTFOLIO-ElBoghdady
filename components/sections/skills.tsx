@@ -3,6 +3,59 @@
 import { cn } from "@/lib/utils"
 import { Code2, Palette, Layers, Globe, Zap, GitBranch, Server, Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
+import { Gauge, Smartphone, Layout, Activity, Monitor } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+const services = [
+  {
+    icon: Code2,
+    title: "Web Development",
+    description: "Building responsive, modern web applications using React, Next.js, and Tailwind CSS. Experienced in creating modular components and reusable layouts.",
+    badge: "Frontend"
+  },
+  {
+    icon: Gauge,
+    title: "Performance Optimization",
+    description: "Optimizing website speed, SEO, and smooth animations to deliver fast and engaging user experiences, based on real project improvements.",
+    badge: "Optimization"
+  },
+  {
+    icon: Palette,
+    title: "Creative UI/UX",
+    description: "Designing visually appealing interfaces with a focus on user engagement, micro-interactions, and intuitive navigation.",
+    badge: "Design"
+  },
+  {
+    icon: Smartphone,
+    title: "Responsive & RTL Design",
+    description: "Ensuring websites work seamlessly on all devices and support Arabic/RTL layouts without breaking design.",
+    badge: "Mobile/RTL"
+  },
+  {
+    icon: Layout,
+    title: "Component Architecture",
+    description: "Creating maintainable and scalable component structures in Next.js for efficient development and easy updates.",
+    badge: "Architecture"
+  },
+  {
+    icon: Activity,
+    title: "Animations & Micro-interactions",
+    description: "Adding subtle animations, hover effects, and interactive elements to enhance user experience and project polish.",
+    badge: "Motion"
+  },
+  {
+    icon: Zap,
+    title: "Rapid Prototyping",
+    description: "Quickly translating design ideas into functional, interactive prototypes for testing concepts before full implementation.",
+    badge: "Prototype"
+  },
+  {
+    icon: Monitor,
+    title: "Luxury UI & Branding",
+    description: "Crafting premium, elegant interfaces with attention to typography, colors, and subtle details that define high-end digital experiences.",
+    badge: "Branding"
+  },
+]
 
 const technicalSkills = [
   { name: "React / Next.js", level: 92, color: "from-fuchsia-500 to-purple-600" },
@@ -27,48 +80,10 @@ const tools = [
   { name: "AI & Interactive Design", icon: Zap, color: "from-fuchsia-500 to-purple-500" },
 ]
 
-const expertise = [
-  {
-    title: "Frontend Development",
-    description: "Building scalable and responsive web applications using React and Next.js with modern architecture.",
-    icon: Code2,
-    color: "from-fuchsia-500 to-purple-600",
-  },
-  {
-    title: "UI Implementation",
-    description: "Transforming UI/UX designs into pixel-perfect, responsive interfaces with clean component structure.",
-    icon: Palette,
-    color: "from-pink-500 to-rose-500",
-  },
-  {
-    title: "Performance Optimization",
-    description: "Improving loading speed, SEO, and accessibility using modern frontend best practices.",
-    icon: Zap,
-    color: "from-yellow-500 to-orange-500",
-  },
-  {
-    title: "API Integration (Assisted)",
-    description: "Connecting frontend applications with REST APIs, handling dynamic data with guidance.",
-    icon: Server,
-    color: "from-cyan-500 to-teal-500",
-  },
-  {
-    title: "Dynamic CMS Integration (Assisted)",
-    description: "Connecting content from Sanity CMS into frontend applications with support.",
-    icon: Layers,
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    title: "Interactive UI & Micro-interactions",
-    description: "Implementing engaging, smooth animations and responsive UI patterns using Framer Motion and Tailwind CSS.",
-    icon: Sparkles,
-    color: "from-indigo-500 to-purple-500",
-  },
-]
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="skills" className="py-8 lg:py-12 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-secondary/30 via-background to-background" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -142,42 +157,66 @@ export function SkillsSection() {
               </div>
             </div>
           </div>
-
-          {/* Areas of Expertise */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-accent/10">
-                <Globe className="w-5 h-5 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground">Areas of Expertise</h3>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {expertise.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -6 }}
-                  className="group p-6 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                >
-                  <div className={cn("inline-flex p-3 rounded-xl bg-gradient-to-br mb-4", item.color)}>
-                    <item.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h4 className="text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
+      {/* Background decoration */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="py-8 lg:py-12 relative overflow-hidden"
+      >
+      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-blob" />
+      <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-blob delay-2000" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="text-center mb-10">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">
+            What I <span className="text-primary">Deliver</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            From design to deployment, I provide end-to-end frontend solutions tailored to your needs.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+            >
+              <Card className="group relative bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 h-full flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[inherit]" />
+
+                <CardHeader className="relative text-center pb-2">
+                  <span className="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 self-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {service.badge}
+                  </span>
+                  <div className="mx-auto mb-4 w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="relative mt-auto pb-8">
+                  <CardDescription className="text-center text-muted-foreground">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      </motion.div>
     </section>
+    
   )
 }
