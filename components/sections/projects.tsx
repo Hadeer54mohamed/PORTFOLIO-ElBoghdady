@@ -29,14 +29,6 @@ function ProjectImage({ src, alt, className }: { src: string; alt: string; class
 }
 
 const projects = [
-  {
-    title: "Basmat Alidrak",
-    description: "A high-end Arabic corporate platform featuring a cinematic interactive experience. Optimized for performance with Next.js, utilizing Framer Motion for fluid animations and full RTL layout integration.",
-    image: "/projects/basmat.png",
-    technologies: ["Next.js", "Tailwind", "Framer Motion", "RTL"],
-    github: "https://github.com/Hadeer54mohamed/basmat-alidrak.git",
-    demo: "https://basmat-alidrak-kg43.vercel.app/",
-  },
 
   {
     title: "Feminista Accessories",
@@ -54,6 +46,13 @@ const projects = [
     technologies: ["Next.js", "Tailwind CSS", "React"],
     github: "https://github.com/Hadeer54mohamed/Uzi.git",
     demo: "https://uzersaif.com",
+  },{
+    title: "Basmat Alidrak",
+    description: "A high-end Arabic corporate platform featuring a cinematic interactive experience. Optimized for performance with Next.js, utilizing Framer Motion for fluid animations and full RTL layout integration.",
+    image: "/projects/basmat.png",
+    technologies: ["Next.js", "Tailwind", "Framer Motion", "RTL"],
+    github: "https://github.com/Hadeer54mohamed/basmat-alidrak.git",
+    demo: "https://basmat-alidrak-kg43.vercel.app/",
   },
 
   {
