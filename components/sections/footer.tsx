@@ -14,6 +14,8 @@ const socialLinks = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const message = "Hi Dede, I checked your portfolio and would like to talk with you."
+  const whatsappUrl = `https://wa.me/201062801851?text=${encodeURIComponent(message)}`
 
   return (
     <footer className="relative overflow-hidden border-t border-border/40 bg-background pt-12 pb-6">
@@ -34,18 +36,20 @@ export function Footer() {
             className="text-center mb-10"
           >
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground mb-2">
-              Let’s build something <span className="text-primary font-extrabold">Meaningful✨</span>
+              Let's build something <span className="text-primary font-extrabold">Meaningful✨</span>
             </h2>
             <p className="text-muted-foreground text-sm mb-4">
               Open for freelance & collaborations.
             </p>
             <motion.a
-              href="https://wa.me/201062801851"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white text-sm font-medium shadow-md hover:shadow-lg transition-all"
             >
-              Let’s Talk <ArrowUpRight className="w-4 h-4" />
+              Let's Talk <ArrowUpRight className="w-4 h-4" />
             </motion.a>
           </motion.div>
 
