@@ -10,9 +10,11 @@ import { SkillsSection } from "@/components/sections/skills"
 import { TestimonialsSection } from "@/components/sections/testimonials"
 import { ContactSection } from "@/components/sections/contact"
 import { Footer } from "@/components/sections/footer"
+import useEasterEggs from "@/hooks/useEasterEggs"
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+  const { glitchMode, handleSecretClick } = useEasterEggs();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${glitchMode ? "glitch-mode" : ""}`}>
       <AnimatePresence mode="wait">
         {showSplash && <IntroSplash isVisible={showSplash} />}
       </AnimatePresence>
@@ -33,7 +35,7 @@ export default function Home() {
           showSplash ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <Navbar />
+        <Navbar onLogoClick={handleSecretClick} />
         <HeroSection />
         <ProjectsSection />
         <SkillsSection />

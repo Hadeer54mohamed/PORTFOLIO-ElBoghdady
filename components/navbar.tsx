@@ -17,7 +17,7 @@ const navLinks = [
  { href: "#contact", label: "Contact" },
 ]
 
-export function Navbar() {
+export function Navbar({ onLogoClick }: { onLogoClick?: () => void }) {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
@@ -45,7 +45,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* 🔥 Logo (مهم عشان نربطه بالـ Splash بعدين) */}
-          <motion.div layoutId="logo">
+          <motion.div layoutId="logo" onClick={onLogoClick}>
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/images/dede-logo.png"
@@ -53,6 +53,7 @@ export function Navbar() {
                 width={36}
                 height={36}
                 className="rounded-lg"
+                priority
               />
               <span className="hidden sm:block text-sm font-semibold tracking-wide">
                 Hadeer ElBoghdady

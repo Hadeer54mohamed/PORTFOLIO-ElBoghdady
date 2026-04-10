@@ -53,7 +53,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <Analytics />
+        <Analytics debug={false} />
       </body>
     </html>
   )

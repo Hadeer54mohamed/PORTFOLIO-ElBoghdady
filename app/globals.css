@@ -207,3 +207,16 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+.glitch-mode {
+  filter: contrast(1.2) hue-rotate(40deg);
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(2px,-2px); }
+  50% { transform: translate(-2px,2px); }
+  75% { transform: translate(2px,2px); }
+  100% { transform: translate(0,0); }
+}

@@ -13,7 +13,7 @@ export default function IntroSplash({ isVisible }: { isVisible: boolean }) {
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            layoutId="logo" // 🔥 نفس الـ id
+            layoutId="logo" 
             initial={{ scale: 0.6, opacity: 0 }}
             animate={{
               scale: [0.6, 1.1, 1],
@@ -39,7 +39,6 @@ export default function IntroSplash({ isVisible }: { isVisible: boolean }) {
               alt="logo"
               width={180}
               height={180}
-              priority
             />
           </motion.div>
         </motion.div>
